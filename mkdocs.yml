@@ -1,1 +1,120 @@
-site_name: My Docs
+site_name: lx_zjk's blog
+site_description: 不经常更新我的学习笔记
+site_author: lx_zjk
+
+repo_url: https://github.com/lxazjk/zjk.github.io
+repo_name: GitHub
+edit_uri: edit/main/docs/
+
+site_url: https://github.com/lxazjk/zjk.github.io
+
+theme:
+  name: material
+  language: zh
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到亮色模式
+  features:
+    - navigation.tabs 
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - navigation.indexes     # (推荐) 允许点击“文件夹”名称直接跳转到该文件夹下的 index.md
+
+nav:
+  - 首页: index.md
+  
+  - C++ 编程:
+      - 综述与导论: cpp/intro.md
+
+  - 操作系统:
+      - 理论基础: os/intro.md
+      - Linux 内核: os/linux-kernel.md
+      - 虚拟化技术: os/virtualization.md
+
+  - 高性能计算 (HPC):
+      - 并行计算基础: hpc/intro.md
+      - CUDA 编程: hpc/cuda.md
+      - MPI/OpenMP: hpc/mpi-openmp.md
+      - 性能分析工具: hpc/profile.md
+
+  - MLSys:
+      - 综述与导论: mlsys/intro.md
+      - 推理引擎 (TensorRT/TVM): mlsys/inference.md
+      - 训练框架 (PyTorch Internals): mlsys/training.md
+      - efficient-ml:
+        - mlsys/efficient_ml/index.md  
+        - 量化: mlsys/efficient_ml/quantization.md
+        - 蒸馏: mlsys/efficient_ml/distillation.md
+        - 剪枝: mlsys/efficient_ml/pruning.md
+        - NAS: mlsys/efficient_ml/nas.md
+
+  - 计算机基础:
+      - 计算机体系结构:
+        - computer-architecture.md
+      - 计算机网络: 
+        - computer-network.md
+  - 论文阅读:
+      - 2024 笔记: papers/2024/index.md
+      - 经典必读: papers/classics.md
+      - 待读清单: papers/todo.md
+
+  - 关于我: about.md 
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true 
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences 
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets

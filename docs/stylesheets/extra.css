@@ -1,0 +1,18 @@
+.md-typeset pre > code {
+    border-radius: 8px; 
+}
+
+.md-clipboard {
+    color: #a0a0a0;
+    transition: all 0.2s ease;
+}
+
+.md-clipboard:hover {
+    color: #7c4dff; 
+    transform: scale(1.1);
+}
+
+.md-clipboard--copied {
+    color: #00e676 !important;
+}
+
